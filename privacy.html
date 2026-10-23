@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- SAVE AS: privacy.html · LOCATION: C:/MarvelApps/triphub/privacy.html
+     Trip Hub privacy policy (app v1.56, 10/22). For the Google Play listing. Same structure as Day Hub's
+     (C:/MarvelApps/dayhub/privacy.html), written for what Trip Hub's code actually does (DH_MODE "trip" of the
+     shared Hub engine in the Day Hub repo). Update the date whenever a data flow changes. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trip Hub Privacy</title>
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <style>
+    :root { --bg: #0b1020; --fg: #e8ecf8; --dim: #9aa6c4; --accent: #7dd3fc; --line: rgba(255,255,255,.12); }
+    @media (prefers-color-scheme: light) { :root { --bg: #f7f8fc; --fg: #141a2e; --dim: #4b5675; --accent: #0369a1; --line: rgba(0,0,0,.12); } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+    h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 6px; }
+    .dim { color: var(--dim); font-size: 14px; } a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; } td, th { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+    th { font-size: 13px; color: var(--dim); font-weight: 600; }
+  </style>
+</head>
+<body><main>
+  <h1>Trip Hub privacy policy</h1>
+  <p class="dim">Trip Hub is an app by Marvel Corp. Last updated October 22, 2026.</p>
+
+  <h2>The short version</h2>
+  <p>Trip Hub is a trip planner. It does not sell or book travel. What you type into Trip Hub stays on your phone. We have no Trip Hub account system and no database of your trips. There are no ads, no ad trackers and no analytics in the app. A few features you choose to use send data to other services, and each one is listed below.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>Your trips, flights, hotels, rental cars and other bookings (including confirmation numbers and phone numbers you enter), day-by-day plans, packing and documents lists, payments and spending, trip diary, to-dos, lists and settings are saved in your browser's storage on your phone. We cannot see them. A pasted confirmation email is read on your phone; it is not sent anywhere. If Day Hub is on the same phone, Trip Hub shows Day Hub's trips (read only), and Day Hub shows Trip Hub's; that happens on the phone. You can erase everything any time in ⚙ Settings → <b>My data</b> → <b>Erase everything</b>. Erase also signs the phone out of Google, tells Google to drop that sign-in, and forgets saved purchase emails and the AI passphrase for every Hub app on the phone. Uninstalling the app or clearing its site data also removes everything.</p>
+
+  <h2>What leaves your phone, and why</h2>
+  <table>
+    <tr><th>When</th><th>What is sent</th><th>To whom</th></tr>
+    <tr><td>Always (weather)</td><td>The home city or ZIP code you enter and the place names of your trip, then those places' map locations</td><td>Open-Meteo (weather and place search). For US ZIP codes, also Zippopotam.us.</td></tr>
+    <tr><td>Always (opening the app)</td><td>Normal web requests (your IP address, browser type)</td><td>GitHub Pages, which hosts the app, and Google Fonts, which supplies the lettering.</td></tr>
+    <tr><td>If you open a trip map</td><td>The place names and addresses of that trip's destination, hotels, airports and bookings, and the map area on screen</td><td>OpenStreetMap (place search and the map pictures). The map code itself comes from cdnjs (Cloudflare). Places found are remembered on your phone so they are looked up once.</td></tr>
+    <tr><td>If you tap a directions or map link</td><td>The places in that link</td><td>Google Maps, which opens in its own app or browser tab.</td></tr>
+    <tr><td>If you tap the microphone</td><td>What you say</td><td>Your phone's built-in speech-to-text service (on Android, Google's), which turns it into text. Trip Hub receives only the text.</td></tr>
+    <tr><td>If you use the AI helper (Ask, Brain dump, trip ideas)</td><td>The text you send, and for Ask and ideas, the planner and trip details they need. That can include your trip dates and places, bookings, travelers, costs and payments, and lists. Your notes are sent only if you tick <b>Let the AI read my notes</b> (off unless you turn it on).</td><td>Our relay (a Google Apps Script run by Marvel Corp), which passes it to Anthropic's Claude to get the answer (<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic's privacy policy</a>). The relay does not save your text. It keeps only a count of requests per day.</td></tr>
+    <tr><td>If you unlock Trip Hub Pass, Day Hub Pro or Hub AI Credits with the email you bought with</td><td>That email (or your Whop membership id), and a random id your phone makes for itself, to check the purchase is active and limit it to 3 phones</td><td>Our relay, which looks the purchase up with Whop. The relay keeps only a scrambled (one-way) form of your Whop account id with your phones' random ids and the day each was last seen, and for AI credits a number of questions used, never your email. To use a purchase on a new phone, the relay emails a 6-digit code to that address (sent from Marvel Corp's Google account); it remembers only a scrambled form of the email and phone id once the code is confirmed. We never see card details.</td></tr>
+    <tr><td>If you connect Google Calendar</td><td>Trip Hub reads your calendar events to show them and adds your trip, flights, hotels and plans to your calendar</td><td>Google, directly from your phone. The sign-in token is kept on your phone and expires after about an hour.</td></tr>
+    <tr><td>If you turn on backup</td><td>A copy of your Trip Hub data</td><td>A hidden app folder in <b>your own</b> Google Drive. Only the Hub apps on your devices can read it. We cannot. Delete it any time in ⚙ → <b>Backup &amp; sync</b> → <b>Delete my Drive backup</b>.</td></tr>
+    <tr><td>If you connect Gmail (when offered)</td><td>Trip Hub reads emails on your phone (read-only) to find bookings</td><td>Google, directly from your phone. Email content is processed on your phone and is not sent to us or anyone else. Nothing is added until you tap Add.</td></tr>
+    <tr><td>If you share a diary, wrap-up or "who owes whom"</td><td>That text</td><td>Only the app you pick in your phone's share menu.</td></tr>
+    <tr><td>If you turn on reminders</td><td>Nothing. Reminders come from your phone itself.</td><td>No one</td></tr>
+  </table>
+
+  <h2>Google user data</h2>
+  <p>Trip Hub's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Google data is used only to provide the features you turned on, in the app, on your phone. It is not sold, not used for advertising, not used to train AI models, and no person at Marvel Corp reads it. To disconnect, use ⚙ Settings in Trip Hub or remove the app at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. The backup copy can be deleted from Google Drive → Settings → Manage apps.</p>
+
+  <h2>Children</h2>
+  <p>Trip Hub is for people 13 and older. It is not directed at children, and we do not knowingly collect information from children under 13.</p>
+
+  <h2>Selling data</h2>
+  <p>We do not sell or rent personal information. We hold almost none of it.</p>
+
+  <h2>Changes</h2>
+  <p>If what Trip Hub sends anywhere changes, this page changes first, and the date at the top changes with it.</p>
+
+  <h2>Contact</h2>
+  <p>Marvel Corp, <a href="mailto:smarvel1963@gmail.com">smarvel1963@gmail.com</a></p>
+  <p class="dim"><a href="./">← Back to Trip Hub</a> · <a href="../dayhub/terms.html">Terms</a></p>
+</main></body>
+</html>
